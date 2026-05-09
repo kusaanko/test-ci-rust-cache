@@ -10,3 +10,4 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
       - uses: ./.github/workflows/setup-rust
       - run: cargo build --release
+      - run: exit 1 # Force a failure to test cache-on-failure
