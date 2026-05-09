@@ -1,0 +1,10 @@
+name: Setup Rust
+description: "Set up Rust environment with optional caching for GitHub Actions workflows."
+
+runs:
+  using: "composite"
+  steps:
+    - uses: Swatinem/rust-cache@v2
+      with:
+        shared-key: build
+        cache-on-failure: true
